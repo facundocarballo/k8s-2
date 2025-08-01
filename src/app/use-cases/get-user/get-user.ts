@@ -2,8 +2,6 @@ import { UserNotFound } from "#app/exceptions/user-not-found";
 import { K8S1GetUserParams } from "#app/ports/k8s-1/get-user/k8s-1-get-user.params";
 import { K8SGetUserNotFound, K8SGetUserResultOk } from "#app/ports/k8s-1/get-user/k8s-1-get-user.result";
 import { K8S1Gateway } from "#app/ports/k8s-1/k8s-1.gateway";
-import { UseCase } from "#app/ports/use-case";
-import { UserRepository } from "#app/ports/user-repository";
 import { K8S1ServiceException } from "#domain/exceptions/k8s-1.exception";
 import { User } from "#domain/user";
 import { GetUserUseCaseInput } from "./get-user-input";
