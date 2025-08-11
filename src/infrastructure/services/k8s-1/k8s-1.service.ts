@@ -10,7 +10,7 @@ import { StatusCodes } from "http-status-codes";
 export class K8S1Service implements K8S1Gateway {
     public async getUser(params: K8S1GetUserParams): Promise<K8S1GetUserResult> {
         try {
-             const response = await axios.get<string>(`http://k8s-1.microservice:8080/user/${params.userId}`);
+             const response = await axios.get<string>(`http://k8s-1.microservices:8080/user/${params.userId}`);
              const responseBody = K8S1GetUserResponseSchema.parse(response.data);
 
              return new K8SGetUserResultOk(
